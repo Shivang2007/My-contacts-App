@@ -1,0 +1,90 @@
+<HistoryPage>:
+    on_enter:root.enter()
+    MDBoxLayout:
+        orientation:'vertical'
+        MDTopAppBar:
+            id:tbar
+            title:root.app_title
+            #right_action_items: [["menu", lambda x: root.home()]]
+        
+        ScrollView:
+            MDList:
+                id: flist
+                padding: 20,30
+                spacing: 0,20
+
+    MDFloatingActionButton:
+        icon: "message-reply-text-outline"
+        pos_hint: {"center_x": .85, "center_y": .1}
+        on_release:root.contact()
+
+<AddContactBox>:
+    orientation:'vertical'
+    size_hint_y:None
+    height:'150dp'
+    
+    MDLabel:
+        text:"Add Contact Now"
+        font_style:'Body2'
+        
+    MDTextField:
+        hint_text:'Name'
+        required:True
+        multiline:False
+        text:''
+        id:cn
+        text_color_focus:'red'
+        
+    MDTextField:
+        hint_text:'Mobile Number'
+        required:True
+        multiline:False
+        text:''
+        id:no
+        text_color_focus:'red'
+
+<ContactsPage>:
+    on_enter:root.enter()
+    MDBoxLayout:
+        orientation:'vertical'
+        MDTopAppBar:
+            id:tbar
+            title:root.app_title
+            #right_action_items: [["home", lambda x: root.home()]]
+        
+        ScrollView:
+            MDList:
+                id: flist
+                padding: 20,30
+                spacing: 0,20
+                
+    MDFloatingActionButton:
+        icon: "plus"
+        pos_hint: {"center_x": .85, "center_y": .1}
+        on_release:root.add_contact()
+        
+        
+<ProfilePage>:
+    on_enter:root.enter()
+    MDBoxLayout:
+        orientation:'vertical'
+        MDTopAppBar:
+            id:tbar
+            title:'Person Contact'
+            right_action_items: [["home", lambda x: root.home()]]
+       
+        ScrollView:
+            do_scroll_x:False
+            do_scroll_y:True
+            bar_margin:4
+            bar_width:10
+            scroll_type:['bars', 'content']
+            bar_color:[0, 0, 1, 1]
+            id:scroll
+            
+            GridLayout:
+                size_hint_y:None
+                spacing:0,30
+                padding:25,150
+                id:grid
+                cols:1
