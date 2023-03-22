@@ -142,12 +142,10 @@ class ProfilePage(Screen):
             
             create_notification(
                 small_icon="icon.png",
-                channel_id="1", title="You have a message",
+                title="You have a message",
                 text="hi, just wanted to check on you",
-                ids=1, channel_name=f"ch1",
                 large_icon="icon.png",
                 expandable=True,
-                small_icon_color=Color().rgb(0x00, 0xC8, 0x53),  # 0x00 0xC8 0x53 is same as 00C853
                 big_picture="icon.png"
             )
         except Exception as e:
