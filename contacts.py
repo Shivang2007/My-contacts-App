@@ -142,10 +142,13 @@ class ProfilePage(Screen):
             
             create_notification(
                 small_icon="icon.png",
+                channel_id ='1',
                 title="You have a message",
                 text="hi, just wanted to check on you",
                 large_icon="icon.png",
                 expandable=True,
+                ids=1,
+                channel_name='ch1',
                 big_picture="icon.png"
             )
         except Exception as e:
