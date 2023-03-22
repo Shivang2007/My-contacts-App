@@ -199,7 +199,7 @@ android.permissions = INTERNET,READ_EXTERNAL_STORAGE,MANAGE_EXTERNAL_STORAGE,CAL
 #android.add_resources =
 
 # (list) Gradle dependencies to add
-#android.gradle_dependencies =
+android.gradle_dependencies = androidx.appcompat:appcompat:1.2.0, androidx.browser:browser:1.4.0
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
