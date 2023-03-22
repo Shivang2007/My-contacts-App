@@ -141,7 +141,7 @@ class ProfilePage(Screen):
             from kvdroid.tools import get_resource
             
             create_notification(
-                small_icon=get_resource("drawable").ico_nocenstore,  # app icon
+                small_icon="icon.png",
                 channel_id="1", title="You have a message",
                 text="hi, just wanted to check on you",
                 ids=1, channel_name=f"ch1",
